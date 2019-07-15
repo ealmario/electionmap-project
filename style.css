@@ -39,6 +39,7 @@ header {
   font: 16px/28px 'Open Sans', Helvetica, Arial, sans-serif;
   color: #454545;
 }
+
 #stateResults, #countryResults {
   border-collapse: collapse;
   background-color: #f2f2f2;
@@ -82,3 +83,104 @@ footer span {
   color: #f16059;
   padding: 0 5px;
 }
+
+/****** MEDIA QUERY ******/
+  /* SMART PHONES */
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  
+  header {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 32px;
+    font-size: 16px;
+  }
+
+  .map-container {
+    display: flex;
+    width:100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #map_canvas {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    top: 30px;
+    left: 10px;
+  }
+
+  #countryResults {
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    line-height: 16px;
+  }
+
+  #stateResults {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 12px;
+    position: absolute;
+    top: 250px;
+    left: 8px;
+    text-align: center;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .page{
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .map-container {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  header {
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #map_canvas {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #countryResults {
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+  }
+
+  #stateResults {
+    width: 95%;
+    top: 380px;
+  }
+
+  footer {
+    display: none;
+  }
+} 
